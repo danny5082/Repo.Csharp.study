@@ -27,6 +27,7 @@ namespace App150
 
             Console.WriteLine("main종료");
         }
-    }
-}
 
+    }
+
+}
