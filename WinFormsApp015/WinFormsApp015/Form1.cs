@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp015
 {
@@ -49,6 +50,39 @@ namespace WinFormsApp015
         private void chkItalic_CheckedChanged(object sender, EventArgs e)
         {
             ChangeFont();
+        }
+
+        
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            progressBar1.Value = trackBar1.Value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form();
+            frm.Text = "Modal Form";
+            frm.Width = 400;
+            frm.Height = 200; 
+            frm.BackColor = Color.White;
+            frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form();
+            frm.Text = "Modal Form";
+            frm.Width = 400;
+            frm.Height = 200;
+            frm.BackColor = Color.White;
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(txtSampleText.Text,
+                "MessageBox Test",MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
