@@ -84,7 +84,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(79, 136);
+            this.trackBar1.Location = new System.Drawing.Point(79, 147);
             this.trackBar1.Maximum = 20;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(622, 45);
@@ -93,10 +93,13 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(79, 187);
+            this.progressBar1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.progressBar1.Location = new System.Drawing.Point(79, 344);
             this.progressBar1.Maximum = 20;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(622, 23);
+            this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.progressBar1.Size = new System.Drawing.Size(622, 251);
             this.progressBar1.TabIndex = 7;
             // 
             // button1
@@ -136,7 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 617);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
