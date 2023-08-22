@@ -1,0 +1,29 @@
+﻿@page
+<h2>두 정수를 넣어주세요.</h2>
+
+<form method="post">
+    <label for="number1">숫자 1:</label>
+    <input type="number" id="number1" name="number1" required />
+    <br />
+    <label for="number2">숫자 2:</label>
+    <input type="number" id="number2" name="number2" required />
+    <br />
+    <input type="submit" id="Plus" value="사칙연산" />
+</form>
+
+    @if (ViewBag.Plus != null)
+    {
+    <h3>sum: @ViewBag.Plus</h3>
+}
+    @if (ViewBag.Minus != null)
+    {
+    <h3>difference: @ViewBag.Minus</h3>
+    }
+@if (ViewBag.gop != null)
+    {
+    <h3>product: @ViewBag.gop</h3>
+    }
+    @if (ViewBag.na != null)
+    {
+    <h3>divide: @ViewBag.na</h3>
+    }

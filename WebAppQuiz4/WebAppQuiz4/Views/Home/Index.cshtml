@@ -1,0 +1,17 @@
+﻿@page
+<h2>만난날을 입력해 주세요.</h2>
+
+<form method="post">
+    <label for="number1"> 연인과 만난날:</label>
+        <input type="date" id="number1" name="number1" required />><br>
+    <br />
+
+        
+        <br />
+    <input type="submit" id="Plus" value="만난날 계산" />
+</form>
+
+@if (ViewBag.Plus != null)
+{
+    <h3>오늘로 연인과 @ViewBag.Plus 째 함께 입니다.</h3>
+}

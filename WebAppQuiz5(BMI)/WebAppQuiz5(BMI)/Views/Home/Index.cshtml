@@ -1,0 +1,43 @@
+﻿@page
+<h2 style="background-color:skyblue">PIBW 테스트</h2>
+
+<div style="width:220px;
+            height:130px;
+            border:solid 1px #bbbbbb;
+            border-radius:15px;
+            margin:10px 0 0 10px;
+            padding:10px 0 0 15px;">
+<form method="post">
+    <label for="number1"> 키:</label>
+        <input style="width:152px;
+            height:18px;" type="number" name="number1" required /><br>
+    
+    <label for="number2"> 몸무게:</label>
+        <input style="width:120px;
+            height:18px;" type="number" name="number2" required /><br>
+   
+    <label for="number3"> 성별(남자/여자):</label>
+        <input style="width:55px;
+            height:18px;" type="text" name="number3" required /><br>
+    
+    <br />
+        <input style="width:180px;
+            height:30px;
+            background-color:pink"
+               type="submit" value="BMI계산" />
+</form>
+</div>
+
+
+
+@if (ViewBag.Plus != null)
+{
+    <h3 style="width:220px;
+            height:30px;
+            border:solid 1px #bbbbbb;
+            border-radius:15px;
+            margin:10px 0 0 10px;
+            padding:10px 0 0 15px;">
+        당신은 @ViewBag.Plus 입니다.
+    </h3>
+}
