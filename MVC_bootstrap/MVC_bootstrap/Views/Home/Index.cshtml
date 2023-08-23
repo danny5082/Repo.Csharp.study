@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container bg-warning shadow mx-auto mt-5 p-5 w-75">
+        <h2> My ToDo App</h2>
+        <hr>
+        <div class="input-group">
+            <input id="item" class="form-control" type="text" placeholder="할일을 입력하세요">
+            <button type="button" class="btn btn-primary" onclick="addItem()">할일 추가</button>
+        </div>
+        <hr>
+        <ul id="todolist" class="list-group"></ul>
+    </div>

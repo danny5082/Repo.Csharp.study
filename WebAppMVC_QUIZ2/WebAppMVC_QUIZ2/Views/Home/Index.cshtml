@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h2 style="background-color:skyblue">환율 확인</h2>
+<form method="post">
+    <label for="number">원단위 입력:</label>
+    <input type="number" class="form-control"
+           name ="number"id="number" placeholder="1000"><br>
+    <input type="submit" class="btn btn-primary" id="Plus" value="확인하기" />
+    
+</form>
+<br />
+<style>
+    h3{background-color:pink}
+</style>
+<h3>WON: @ViewData["WON"]\</h3>
+<h3>EUR: @ViewData["EUR"]€</h3>
+<h3>JPY: @ViewData["JPY"]¥</h3>
+<h3>CNY: @ViewData["CNY"]¥</h3>
+
+    

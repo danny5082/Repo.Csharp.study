@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "UseViewBag";
+}
+
+<h1>UseViewBag</h1>
+@ViewBag.data1;<br />
+@ViewBag.data2;<br />
+@ViewBag.data3;
+@{
+    foreach (var iten in ViewBag.data4) ;}<br />
+@TempData["data3"]
