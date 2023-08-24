@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var cars = ViewData["data1"] as List<Car>;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Btand</th>
+            <th>Speed</th>
+        </tr>
+        @foreach (var item in cars)
+            {
+                <tr>
+                    <th>@item.ID</th>
+                    <th>@item.Brand</th>
+                    <th>@item.speed</th>
+                </tr>
+                
+            }
+    </table>
+</div>
