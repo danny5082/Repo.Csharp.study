@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppTagHelpers_forms01", "WebAppTagHelpers_forms01\WebAppTagHelpers_forms01.csproj", "{8494D5EB-A6AB-47F7-AD59-C36EAAB947EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8494D5EB-A6AB-47F7-AD59-C36EAAB947EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8494D5EB-A6AB-47F7-AD59-C36EAAB947EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8494D5EB-A6AB-47F7-AD59-C36EAAB947EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8494D5EB-A6AB-47F7-AD59-C36EAAB947EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43A10927-386C-452E-8F1F-5F9A40D03E15}
+	EndGlobalSection
+EndGlobal

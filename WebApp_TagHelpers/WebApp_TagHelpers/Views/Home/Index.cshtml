@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+@* Link 만들기 *@
+
+<a href="/Home/Contact ">Contact_Page_1</a>    @* 일관성이 있음 패턴이 바뀌면 접속 안됨 *@
+<br />
+@Html.ActionLink("Contact_Page_2", "Contact" , "Home")
+<br />
+<a href="@Url.Action("Contact" , "Home")" >Contact_Page_3</a>
+<br />
+<a asp-controller="Home" asp-action="Contact">Contact_Page_4</a>

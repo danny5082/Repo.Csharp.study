@@ -1,0 +1,60 @@
+﻿@model WebAppTagHelpers_forms02.Models.Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">입사지원서</h1>
+    
+</div>
+
+<div>
+
+    <div class="col-sm-4">
+            <label asp-for="NAME">이름</label>
+            <input asp-for="NAME" placeholder="이름을 입력하세요" class="form-control" />
+            <br />
+            <label asp-for="NAME">성별</label>
+            <select asp-for="Gender" class="form-select"
+                    asp-items="Html.GetEnumSelectList<Gender>()">
+                <option value="">성별을 선택하세요</option>
+
+            </select>
+
+            <br />
+            <label>주소</label>
+        <div class="row g-3">
+            <div class="col-sm-7">
+                <input type="text" class="form-control" placeholder="City" aria-label="City">
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="State" aria-label="State">
+            </div>
+            <div class="col-sm">
+                <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+            </div>
+        </div>
+            <br />
+            <label asp-for="AGE">나이</label>
+            <input asp-for="NAME" placeholder="나이를 입력하세요" class="form-control" />
+            <br />
+            <label asp-for="HP">전화번호</label>
+            <input asp-for="NAME" placeholder="전화번호를 입력하세요" class="form-control" />
+            <br />
+            <label>지원동기</label>
+            <textarea asp-for="Description"
+                          rows="5" class="form-control">
+
+            </textarea>
+            <label>협업을 통해 문제를 극복해낸 사례</label>
+            <textarea asp-for="Description"
+                  rows="5" class="form-control">
+
+            </textarea>
+            </div>
+            <br />
+
+            <button type="button" class="btn btn-success">COMMIT</button>
+            
+    </div>
+</div>
