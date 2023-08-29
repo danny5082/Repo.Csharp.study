@@ -1,0 +1,84 @@
+﻿@model Score
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">성적 계산기</h1>
+</div>
+
+
+
+<div>
+    <form method="post" asp-controller="Home" asp-action="Index">
+        <label>국어성적</label>
+        <select asp-for="rnrdj" class="form-control">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+        </select>
+        <br />
+        <label>영어성적</label>
+        <select asp-for="duddj" class="form-control">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+        </select>
+        <br />
+        <label>수학성적</label>
+        <select asp-for="tngkr" class="form-control">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+        </select>
+        <br />
+        <label>사회성적</label>
+        <select asp-for="tkghl" class="form-control">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+        </select>
+        <br />
+        <label>과학성적</label>
+        <select asp-for="rhkgkr" class="form-control">
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+        </select>
+        <br />
+        <input type="submit" value="submit" class="btn btn-outline-primary" />
+    </form>
+</div>
+<br />
+<div>
+    @if (ViewData["AverageScore4_5"] != null && ViewData["AverageScore100"] != null)
+    {
+        <p>4.5점만점 :@(ViewData["AverageScore4_5"])</p>
+        <p>100점만점 :@(ViewData["AverageScore100"])</p>
+    }
+</div>
