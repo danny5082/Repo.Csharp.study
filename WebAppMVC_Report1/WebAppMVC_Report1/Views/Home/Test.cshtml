@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+}
+
+<h1>Test</h1>
+<h2>공부를 열심히 해봅시다.</h2>
+<h2 class="item">ASP.Net Core를 공부중입니다.</h2>
+<h2 id="temp">화이팅!</h2>
+@* 
+<script>
+    alert("hello Front-End programming");
+</script> *@
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+        $('*').css('color', 'blue')
+    });
+</script> 
+
+<script>
+    $(document).ready(function () {
+        $('h2').css('color', '#000000')
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('h2.item').css('color', 'red')
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('h2#temp').css('color', 'yellow')
+    });
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('tr:odd').css('background', '#A5A5A5');
+        $('tr:even').css('background', '#CCCCCC');
+
+        $('th').css('background', 'red').css('color','#FFFFFF')
+
+    });
+</script>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Hp</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>홍길동</td>
+        <td>010-1111-1111</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>강감찬</td>
+        <td>010-2222-2222</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>유관순</td>
+        <td>010-3333-3333</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>홍길동</td>
+        <td>010-1111-1111</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>강감찬</td>
+        <td>010-2222-2222</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>유관순</td>
+        <td>010-3333-3333</td>
+    </tr>
+
+</table>

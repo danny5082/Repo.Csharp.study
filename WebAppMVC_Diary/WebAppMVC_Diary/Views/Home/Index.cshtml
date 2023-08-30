@@ -1,0 +1,45 @@
+﻿@model List<WebAppMVC_Diary.Models.Diarys>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">일기장</h1>
+    <h2 >함부로 보지마세요</h2>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('tr:odd').css('background', '#A5A5A5');
+        $('tr:even').css('background', '#CCCCCC');
+        $('th').css('background', 'black').css('color', '#FFFFFF')
+
+    });
+</script>
+
+<form method="post" >
+    
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>No</th>
+                <th>Name</th>
+                <th>Content</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.No</td>
+                    <td>@item.Name</td>
+                    <td>@item.Content</td>
+                    <td>@item.Date.ToString("yyyy-MM-dd")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
