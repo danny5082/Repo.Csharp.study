@@ -1,0 +1,40 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>index</h1>
+<div>
+    
+    <form method="post" asp-controller="Home" asp-action="index">
+        <!--------------------------이름------------------------------->
+        <input asp-for="Name" class="form-control" placeholder="이름을 넣어주세요." />
+        <span asp-validation-for="Name" style="color:red"></span>
+        <br />
+        <!--------------------------메일------------------------------->
+        <input asp-for="Email" class="form-control" placeholder="이메일을 넣어주세요." />
+        <span asp-validation-for="Email" style="color:red"></span>
+        <br />
+        <!--------------------------나이------------------------------->
+        <input asp-for="Age" class="form-control" placeholder="나이를 넣어주세요." />
+        <span asp-validation-for="Age" style="color:red"></span>
+        <br />
+        <!--------------------------PW------------------------------->
+        <input asp-for="Password" class="form-control" placeholder="패스워드를 작성해주세요." />
+        <span asp-validation-for="Password" style="color:red"></span>
+        <br />
+        <!--------------------------PW확인------------------------------->
+        <input asp-for="ConfirmPassword" class="form-control" placeholder="확인 패스워드를 작성하세요." />
+        <span asp-validation-for="ConfirmPassword" style="color:red"></span>
+        <br />
+        <!--------------------------Hp------------------------------->
+        <input asp-for="Hp" class="form-control" placeholder="전화번호를 넣어주세요." />
+        <span asp-validation-for="Hp" style="color:red"></span>
+        <br />
+        <!--------------------------URL------------------------------->
+        <input asp-for="WebsiteURL" class="form-control" placeholder="URL을 넣어주세요." />
+        <span asp-validation-for="WebsiteURL" style="color:red"></span>
+        <br />
+                <input type="submit" value="OK" class="btn btn-outline-primary">
+    </form>
+</div>
