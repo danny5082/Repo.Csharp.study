@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "About 페이지";
+}
+
+
+<h1>주문하신 달팽이 입니다.</h1>
+
+@if (ViewBag.SelectedSize != null)
+{
+    int size = ViewBag.SelectedSize;
+    int[,] snailArray = new int[size, size];
+    int num = 1;
+    int row = 0, col = 0;
+
+    for (int layer = 0; layer <= size / 2; layer++)
+    {
+        for (int i = col; i < size - col; i++)
+            snailArray[row, i] = num++;
+        for (int i = row + 1; i < size - row; i++)
+            snailArray[i, size - 1 - col] = num++;
+        for (int i = size - 2 - col; i >= col; i--)
+            snailArray[size - 1 - row, i] = num++;
+        for (int i = size - 2 - row; i > row; i--)
+            snailArray[i, col] = num++;
+
+        row++;
+        col++;
+    }
+
+    <table style="border: 1px solid black ">
+        @for (int i = 0; i < size; i++)
+        {
+            <tr>
+                @for (int j = 0; j < size; j++ )
+                {
+                    <td style="border: 1px solid black">@snailArray[i, j]</td>
+                }
+            </tr>
+        }
+    </table>
+}

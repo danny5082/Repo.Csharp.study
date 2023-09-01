@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>자동 언어 감지 및 다크/라이트 모드 전환 예제</title>
+    <!-- highlight.js 스타일 및 스크립트 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/dracula.min.css"> <!-- 다크 모드 스타일 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <!-- 스타일 추가 (코드 박스 내 다크 모드 스타일) -->
+    <style>
+        #codeBlock {
+            background-color: white; /* 라이트 모드 배경색 */
+            color: black; /* 라이트 모드 텍스트 색상 */
+            position: relative;
+            transition: background-color 0.5s, color 0.5s; /* 부드러운 전환 효과 */
+        }
+
+            #codeBlock.dark-mode {
+                background-color: black; /* 다크 모드 배경색 */
+                color: #bb44bb ; /* 다크 모드 텍스트 색상 */
+            }
+
+        .mode-toggle-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>자동 언어 감지 및 다크/라이트 모드 전환 예제</h1>
+    <!-- 코드 박스 생성 및 코드 추가 (언어 자동 감지) -->
+    <pre><code id="codeBlock">
+using Microsoft.AspNetCore.Mvc;
+using miniproject1.Models;
+using System.Diagnostics;
+
+namespace miniproject1.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}
+//ddddddd
+    </code></pre>
+
+    <!-- highlight.js 활성화 스크립트 -->
+    <script>
+        // 코드 언어 자동 감지 설정
+        document.addEventListener("DOMContentLoaded", function () {
+            var codeBlocks = document.querySelectorAll("pre code");
+            codeBlocks.forEach(function (codeBlock) {
+                hljs.highlightBlock(codeBlock);
+            });
+        });
+
+        // 다크/라이트 모드 토글 함수
+        function toggleDarkMode() {
+            var codeBlock = document.getElementById("codeBlock");
+            codeBlock.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <!-- 모드 전환 버튼 -->
+    <button class="mode-toggle-button" onclick="toggleDarkMode()">모드 전환</button>
+</body>
+</html>

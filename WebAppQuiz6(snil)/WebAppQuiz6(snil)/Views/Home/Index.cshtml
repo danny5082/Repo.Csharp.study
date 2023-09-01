@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">달팽이 배열을 만드는 페이지입니다</h1>
+    <h2>원하는 크기를 선택해 주세요</h2>
+    </div>
+
+<form action="@Url.Action("About", "Home")" method="get">
+    <label for="selectedSize">크기 선택: </label>
+    <div class="input-group">
+    <select class="form-select" name="selectedSize" id="selectedSize" aria-label="Example select with button addon">>
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="9">9</option>
+        <option value="11">11</option>
+    </select>
+    <input type="submit" value="확인" class="btn btn-outline-secondary">
+    </div>
+</form>
